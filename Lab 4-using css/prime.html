@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Prime Generator </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styleSheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+</head>
+<body>
+  <div id="header">
+    <h1>Program Name: Web Programming</h1>
+    <h2>Course Name: CST8238_350</h2>
+  </div>
+
+  <div id="menu" class="container">
+    <ul>
+      <li><a href="lab2.html">Lab 2</a></li>
+      <li><a href="lab3.html">Lab 3</a></li>
+      <li><a href="prime.html">Lab 4</a></li>
+    </ul>
+  </div>
+  <div id="content" class="container">
+<h1 class="mt-4">Prime Numbers Generator</h1>
+    <button onclick="getPrimes()" class="btn btn-primary mt-4">Generate Prime Numbers</button>
+<div id="primeNumbers"></div>
+    
+    
+    <script>
+    function getPrimes() {
+        var lowerRange = parseInt(prompt("Enter lower range:"));
+        var upperRange = parseInt(prompt("Enter upper range:"));
+
+        var primeNumbersDiv = document.getElementById("primeNumbers");
+        primeNumbersDiv.innerHTML = "";  // Clear previous results
+
+        var result = "<p>Lower range: " + lowerRange + "</p>";
+        result += "<p>Upper range: " + upperRange + "</p>";
+        result += "<p>Prime numbers:</p>";
+
+        findPrimes(lowerRange, upperRange, result);
+      }
+
+      function isPrime(num) {
+        if (num < 2) return false;
+        for (var i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function findPrimes(lower, upper, result) {
+        var primeNumbersDiv = document.getElementById("primeNumbers");
+        for (var num = lower; num <= upper; num++) {
+          if (isPrime(num)) {
+            result += "The prime number is: " + num + "<br>";
+          }
+        }
+        primeNumbersDiv.innerHTML = result;  // Display prime numbers
+      }
+    </script>
+  </div>
+
+  <div id="footer">
+    <p>Student Number: 041091664</p>
+    <p>First Name: Mansi</p>
+    <p>Last Name: Joshi</p>
+    <p>Email Address: josh0080@algonquinlive.com</p>
+  </div>
+</body>
+</html>

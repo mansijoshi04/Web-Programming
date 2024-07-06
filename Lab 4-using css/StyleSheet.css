@@ -1,0 +1,55 @@
+body {
+
+  }
+  
+  h3 {
+    color: green;
+  }
+  
+  h4 {
+    color: red;
+  }
+  
+  #header {
+    text-align: center;
+    background-color: blue;
+    padding: 10px;
+  }
+  
+ 
+  #menu {
+    float: left; /* Align menu to the left */
+    padding-left: 20px; /* Add left padding to the menu */
+    width: 200px; /* Set a specific width for the menu section */
+    padding: 650px 0; /* Add some padding to the menu section */
+    background-color: yellow; /* Optional: add a background color */
+}
+#menu ul {
+  list-style: none;
+  padding: 20px 2;
+}
+
+#menu ul li {
+  margin-bottom: 20px;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+#content {
+    margin-left: 240px; /* Adjust the margin to accommodate the menu section */
+    padding: 20px; /* Add some padding to the content */
+}
+  
+  #footer {
+    background-color:#f0f0f0;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    clear: both; /* Clear both floated elements (menu and content) */
+}
+
+  
