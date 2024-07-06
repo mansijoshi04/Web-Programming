@@ -1,0 +1,2 @@
+1. Edit the file path to the php files in the siteground server. Either put file path or URL. 
+2. Properly set up db config in each file excluding header, footer, menu. 
